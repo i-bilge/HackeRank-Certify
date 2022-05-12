@@ -1,0 +1,11 @@
+/*
+Enter your query below.
+Please append a semicolon ";" at the end of the query
+*/
+Select a.roll_number,a.name
+from student_information a
+inner join
+examination_marks b
+on a.roll_number = b.roll_number
+group by b.roll_number
+Having Sum(b.subject_one + b.subject_two + b.subject_three) < 100
